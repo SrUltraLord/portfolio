@@ -10,4 +10,4 @@ My personal portfolio. (WIP)
 
 # Author
 
-- (SrUltraLord)[https://github.com/SrUltraLord]
+- [SrUltraLord](https://github.com/SrUltraLord)
