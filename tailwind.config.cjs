@@ -10,7 +10,11 @@ module.exports = {
         "foreground-primary": "#F7F7F9",
       },
       fontFamily: {
-        montserrat: "Montserrat",
+        montserrat: {
+          bold: "Montserrat Bold",
+          regular: "Montserrat Regular",
+          light: "Montserrat Light"
+        },
         iosevka: "Iosevka",
       },
     },
