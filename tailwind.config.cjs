@@ -6,14 +6,14 @@ module.exports = {
       colors: {
         "surface-primary": "#FFFFFF",
         "surface-secondary": "#494D64",
-        "accent-primary": "#FF0000",
+        "accent-primary": "#42B883",
         "foreground-primary": "#F7F7F9",
       },
       fontFamily: {
         montserrat: {
           bold: "Montserrat Bold",
           regular: "Montserrat Regular",
-          light: "Montserrat Light"
+          light: "Montserrat Light",
         },
         iosevka: "Iosevka",
       },
