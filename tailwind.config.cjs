@@ -7,7 +7,7 @@ module.exports = {
         "surface-primary": "#FFFFFF",
         "surface-secondary": "#494D64",
         "accent-primary": "#42B883",
-        "foreground-primary": "#F7F7F9",
+        "foreground-primary": "#213547",
       },
       fontFamily: {
         montserrat: {
@@ -16,6 +16,10 @@ module.exports = {
           light: "Montserrat Light",
         },
         iosevka: "Iosevka",
+        "libre-franklin": {
+          bold: "Libre Franklin Bold",
+          regular: "Libre Franklin Regular",
+        },
       },
     },
   },
