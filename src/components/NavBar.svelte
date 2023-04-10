@@ -1,7 +1,4 @@
 <script lang="ts">
-  import MenuBarsIcon from "../icons/nav/MenuBarsIcon.svelte";
-  import CloseIcon from "../icons/nav/CloseIcon.svelte";
-
   type Link = {
     title: string;
     to: string;
@@ -40,9 +37,9 @@
       on:click={handleToggleMenu}
     >
       {#if isOpen}
-        <CloseIcon />
+        <img class="text-black h-6 w-6" src="/assets/img/nav/close.svg" alt="close-icon" />
       {:else}
-        <MenuBarsIcon />
+        <img class="text-black h-6 w-6" src="/assets/img/nav/menu_bars.svg" alt="menu-icon" />
       {/if}
     </button>
 
