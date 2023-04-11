@@ -37,9 +37,17 @@
       on:click={handleToggleMenu}
     >
       {#if isOpen}
-        <img class="text-black h-6 w-6" src="/assets/img/nav/close.svg" alt="close-icon" />
+        <img
+          class="h-6 w-6 text-black"
+          src="/assets/img/nav/close.svg"
+          alt="close-icon"
+        />
       {:else}
-        <img class="text-black h-6 w-6" src="/assets/img/nav/menu_bars.svg" alt="menu-icon" />
+        <img
+          class="h-6 w-6 text-black"
+          src="/assets/img/nav/menu_bars.svg"
+          alt="menu-icon"
+        />
       {/if}
     </button>
 
