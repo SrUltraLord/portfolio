@@ -1,0 +1,46 @@
+---
+import GitHub from "/assets/img/landing/github.svg";
+import LinkedIn from "/assets/img/landing/linkedin.svg";
+
+type SocialLink = {
+  iconPath: string;
+  alt: string;
+  title: string;
+  href: string;
+};
+
+const socialLinks: SocialLink[] = [
+  {
+    iconPath: GitHub,
+    alt: "github-icon",
+    title: "github.com/SrUltraLord",
+    href: "https://github.com/SrUltraLord",
+  },
+  {
+    iconPath: LinkedIn,
+    alt: "linkedin-icon",
+    title: "/in/david-a-reyes-p",
+    href: "https://www.linkedin.com/in/david-a-reyes-p/",
+  },
+];
+---
+
+<div class="flex gap-4">
+  {
+    socialLinks.map(({ iconPath, title, href }) => (
+      <a href={href} class="h-fit">
+        <div class="flex h-fit flex-row items-center gap-2">
+          <img
+            class="h-6 w-6 transition hover:scale-125 md:h-6 md:w-6"
+            src={iconPath}
+            alt={title}
+          />
+
+          <p class="hidden hover:font-bold hover:text-accent-primary hover:underline">
+            {title}
+          </p>
+        </div>
+      </a>
+    ))
+  }
+</div>
