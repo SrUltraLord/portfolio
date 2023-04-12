@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { fade } from 'svelte/transition'
+
   type Link = {
     title: string;
     to: string;
@@ -33,20 +35,21 @@
     </a>
 
     <button
-      class="block transition-transform md:hidden"
+      class="grid place-items-center transition-transform md:hidden "
       on:click={handleToggleMenu}
     >
       {#if isOpen}
         <img
-          class="h-6 w-6 text-black"
+          class="h-6 w-6 text-black absolute"
           src="/assets/img/nav/close.svg"
           alt="close-icon"
         />
       {:else}
         <img
-          class="h-6 w-6 text-black"
+          class="h-6 w-6 text-black absolute"
           src="/assets/img/nav/menu_bars.svg"
           alt="menu-icon"
+          transition:fade={{ duration: 100 }}
         />
       {/if}
     </button>
@@ -82,6 +85,8 @@
   {#if isOpen}
     <div
       class="flex h-screen justify-end bg-white bg-white/30 shadow-md backdrop-blur-xl transition duration-300 ease-in-out md:hidden"
+      on:keydown={(e) =>  e.key === 'esc' && closeMenu }
+      on:click|self={closeMenu}
     >
       <!-- Links and Button Container -->
       <div
