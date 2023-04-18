@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { fade } from 'svelte/transition'
+  import { fade } from "svelte/transition";
 
   type Link = {
     title: string;
@@ -35,18 +35,18 @@
     </a>
 
     <button
-      class="grid place-items-center transition-transform md:hidden "
+      class="grid place-items-center transition-transform md:hidden"
       on:click={handleToggleMenu}
     >
       {#if isOpen}
         <img
-          class="h-6 w-6 text-black absolute"
+          class="absolute h-6 w-6 text-black"
           src="/assets/img/nav/close.svg"
           alt="close-icon"
         />
       {:else}
         <img
-          class="h-6 w-6 text-black absolute"
+          class="absolute h-6 w-6 text-black"
           src="/assets/img/nav/menu_bars.svg"
           alt="menu-icon"
           transition:fade={{ duration: 100 }}
@@ -85,7 +85,7 @@
   {#if isOpen}
     <div
       class="flex h-screen justify-end bg-white bg-white/30 shadow-md backdrop-blur-xl transition duration-300 ease-in-out md:hidden"
-      on:keydown={(e) =>  e.key === 'esc' && closeMenu }
+      on:keydown={(e) => e.key === "esc" && closeMenu}
       on:click|self={closeMenu}
     >
       <!-- Links and Button Container -->
@@ -99,7 +99,7 @@
           {#each links as { title, to }}
             <a
               href={`#${to}`}
-              class="text-md font-iosevka font-light transition hover:font-bold hover:text-accent-primary hover:underline md:text-xl"
+              class="font-iosevka text-lg font-light transition hover:font-bold hover:text-accent-primary hover:underline md:text-xl"
               on:click={closeMenu}
             >
               {title}
