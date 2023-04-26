@@ -1,0 +1,27 @@
+---
+interface Props {
+  id: string;
+  title: string;
+  class?: string;
+}
+
+const { id, title, class: additionalClasses } = Astro.props;
+---
+
+<section
+  id={id}
+  class:list={[
+    "flex h-fit flex-col gap-4 p-4 py-8 md:grid md:place-items-center",
+    additionalClasses,
+  ]}
+>
+  <div class="flex w-full flex-col space-y-8 md:max-w-2xl lg:max-w-4xl">
+    <h1
+      class="font-montserrat-bold text-3xl font-extrabold text-accent-primary sm:text-4xl md:text-5xl"
+    >
+      {title}
+    </h1>
+
+    <slot name="content" />
+  </div>
+</section>
