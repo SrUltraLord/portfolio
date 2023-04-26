@@ -1,77 +1,68 @@
 ---
 import davidPotraitImgPath from "/assets/img/about/david_portrait.jpeg";
+
+import SectionLayout from "../layouts/SectionLayout.astro";
 ---
 
-<section
-  id="about"
-  class="flex h-fit flex-col gap-4 bg-[#F9F9F9] p-4 md:grid md:place-items-center py-8"
->
-  <div class="flex w-full flex-col space-y-8 md:max-w-2xl lg:max-w-4xl">
-    <h1
-      class="font-montserrat-bold text-3xl font-extrabold text-accent-primary sm:text-4xl md:text-5xl"
-    >
-      About Me
-    </h1>
-
-    <div class="flex flex-col space-y-8 md:flex-row md:space-x-6 md:space-y-0">
-      <div class="grid w-full place-items-center">
-        <div
-          class="h-64 w-64 overflow-hidden rounded-full bg-slate-50 shadow-lg md:h-full md:rounded-md"
-        >
-          <img
-            class="h-full w-full object-cover object-center"
-            src={davidPotraitImgPath}
-            alt="david-reyes-portrait"
-          />
-        </div>
+<SectionLayout id="about" title="About Me" class="bg-surface-secondary">
+  <div
+    slot="content"
+    class="flex flex-col space-y-8 md:flex-row md:space-x-6 md:space-y-0"
+  >
+    <div class="grid w-full place-items-center">
+      <div
+        class="h-48 w-48 overflow-hidden rounded-full bg-slate-50 shadow-lg md:h-full md:rounded-md"
+      >
+        <img
+          class="h-full w-full object-cover object-center"
+          src={davidPotraitImgPath}
+          alt="david-reyes-portrait"
+        />
       </div>
+    </div>
 
-      <!-- Text -->
-      <div class="flex h-auto flex-col py-0 md:py-2 lg:py-8">
-        <!-- Description -->
-        <p
-          class="font-libre-franklin text-lg text-foreground-primary md:text-xl"
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur.
-        </p>
+    <!-- Text -->
+    <div class="flex h-auto flex-col py-0 md:py-2 lg:py-8">
+      <!-- Description -->
+      <p class="font-libre-franklin text-lg text-foreground-primary md:text-xl">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur.
+      </p>
 
-        <div class="flex-1"></div>
+      <div class="flex-1"></div>
 
-        <h2
-          class="mb-2 mt-4 font-iosevka text-lg font-bold text-accent-primary md:text-xl"
-        >
-          Things I like
-        </h2>
+      <h2
+        class="mb-2 mt-4 font-iosevka text-lg font-bold text-accent-primary md:text-xl"
+      >
+        Things I like
+      </h2>
 
-        <div class="w-full pl-8">
-          <ul class="w-fit list-disc marker:text-accent-primary">
-            <li
-              class="font-libre-franklin text-lg text-foreground-primary md:text-xl"
-            >
-              <span class="font-bold">Books:</span> 1984, Dracula, The Odyssey, and
-              For Whom the Bell Tolls.
-            </li>
-            <li
-              class="font-libre-franklin text-lg text-foreground-primary md:text-xl"
-            >
-              <span class="font-bold">Shows:</span> The Office, It's Always Sunny
-              in Philadelphia, The Mandalorian, Attack On Titan, Jojo's Bizzare Adventure
-              and Chainsaw Man.
-            </li>
-            <li
-              class="font-libre-franklin text-lg text-foreground-primary md:text-xl"
-            >
-              <span class="font-bold">Music:</span> Interpol, Radiohead, CAS, and
-              Angus & Julia Stone.
-            </li>
-          </ul>
-        </div>
+      <div class="w-full pl-8">
+        <ul class="w-fit list-disc marker:text-accent-primary">
+          <li
+            class="font-libre-franklin text-lg text-foreground-primary md:text-xl"
+          >
+            <span class="font-bold">Books:</span> 1984, Dracula, The Odyssey, and
+            For Whom the Bell Tolls.
+          </li>
+          <li
+            class="font-libre-franklin text-lg text-foreground-primary md:text-xl"
+          >
+            <span class="font-bold">Shows:</span> The Office, It's Always Sunny in
+            Philadelphia, The Mandalorian, Attack On Titan, Jojo's Bizzare Adventure
+            and Chainsaw Man.
+          </li>
+          <li
+            class="font-libre-franklin text-lg text-foreground-primary md:text-xl"
+          >
+            <span class="font-bold">Music:</span> Interpol, Radiohead, CAS, and Angus
+            & Julia Stone.
+          </li>
+        </ul>
       </div>
     </div>
   </div>
-</section>
+</SectionLayout>
