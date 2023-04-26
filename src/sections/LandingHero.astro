@@ -1,20 +1,23 @@
 ---
+import avatarImageMobilePath from "/assets/img/landing/landing_mobile.svg";
+import avatarImageDesktopPath from "/assets/img/landing/landing_desktop.svg";
+
 import SocialLinks from "../components/landing/SocialLinks.astro";
 ---
 
 <main
   id="landing"
-  class="grid h-screen w-full place-items-center px-4 sm:px-10"
+  class="grid h-fit w-full place-items-center p-4 md:h-screen md:p-0"
 >
   <!-- Landing Hero -->
   <div
-    class="flex w-full flex-row justify-between gap-8 rounded-md bg-slate-50 p-7 shadow-lg md:w-3/5 lg:w-2/5"
+    class="flex h-fit w-full flex-row justify-between space-x-8 rounded-md bg-slate-50 p-8 shadow-lg md:max-w-2xl lg:max-w-4xl"
   >
     <!-- Hero text -->
     <div class="flex w-full flex-col gap-3 md:w-3/5">
       <!-- Avatar Image (Mobile) -->
       <div class="flex w-full justify-center md:hidden">
-        <img class="w-2/5" src="assets/img/landing/landing_mobile.svg" />
+        <img class="w-2/5" src={avatarImageMobilePath} />
       </div>
 
       <h1
@@ -41,7 +44,7 @@ import SocialLinks from "../components/landing/SocialLinks.astro";
 
     <!-- Landing Image (Desktop) -->
     <div class="hidden md:block md:w-2/5">
-      <img class="h-full" src="assets/img/landing/landing_desktop.svg" />
+      <img class="h-full" src={avatarImageDesktopPath} />
     </div>
   </div>
 </main>
