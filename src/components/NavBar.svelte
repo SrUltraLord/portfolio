@@ -25,7 +25,7 @@
   };
 </script>
 
-<nav class="fixed w-full overflow-hidden shadow-md">
+<nav class="sticky top-0 w-full overflow-hidden shadow-md">
   <!-- Desktop Menu -->
   <div
     class="z-50 flex justify-between bg-slate-100 bg-white/30 p-6 backdrop-blur-xl"
