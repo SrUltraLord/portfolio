@@ -1,11 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
+import NavBar from "../components/NavBar.svelte";
+import Button from "../components/shared/Button.astro";
 import LandingHero from "../sections/LandingHero.astro";
 import AboutMe from "../sections/AboutMe.astro";
-import Button from "../components/shared/Button.astro";
-
-import NavBar from "../components/NavBar.svelte";
+import Experience from "../sections/Experience.astro";
 ---
 
 <Layout title="David's Portfolio">
@@ -16,4 +16,6 @@ import NavBar from "../components/NavBar.svelte";
   <LandingHero />
 
   <AboutMe />
+
+  <Experience />
 </Layout>

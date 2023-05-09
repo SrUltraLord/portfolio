@@ -1,0 +1,62 @@
+---
+interface Props {
+  companyName: string;
+  jobPosition: string;
+  dateInterval: string;
+  isFirst?: boolean;
+}
+
+const { companyName, jobPosition, dateInterval, isFirst = false } = Astro.props;
+---
+
+<div class="flex w-full flex-row space-x-2">
+  <!-- Timeline -->
+  <div class="flex w-8 flex-col items-center md:w-24">
+    <!-- Circle -->
+    <div
+      class="h-8 w-8 rounded-full border-8 border-accent-primary md:h-10 md:w-10 md:border-8"
+    >
+    </div>
+    <!-- Line -->
+    {
+      !isFirst && (
+        <div class="h-full w-1 border-4 border-accent-primary md:border-4" />
+      )
+    }
+  </div>
+
+  <!-- Information -->
+  <!-- Container -->
+  <div class="flex w-full flex-col space-y-4 pb-10 md:space-y-8 md:pb-14">
+    <!-- Date Container -->
+    <div
+      class="w-fit rounded-lg bg-foreground-primary px-2 py-1 md:px-4 md:py-2"
+    >
+      <span class="font-iosevka text-lg text-white md:text-xl">
+        {dateInterval}
+      </span>
+    </div>
+
+    <!-- Information Card -->
+    <div
+      class="flex w-full flex-col space-y-2 overflow-clip rounded-xl border-r-8 border-r-accent-primary bg-white p-4 shadow-xl"
+    >
+      <div>
+        <h1
+          class="font-montserrat text-2xl font-extrabold text-accent-primary md:text-3xl"
+        >
+          {companyName}
+        </h1>
+        <h2
+          class="font-iosevka text-lg font-semibold text-foreground-primary md:text-xl"
+        >
+          {jobPosition}
+        </h2>
+      </div>
+
+      <ul class="w-fit list-inside list-disc marker:text-accent-primary">
+        <slot />
+      </ul>
+    </div>
+  </div>
+</div>

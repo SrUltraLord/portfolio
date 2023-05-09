@@ -1,0 +1,41 @@
+---
+import SectionLayout from "../layouts/SectionLayout.astro";
+import ExperienceCard from "../components/experience/ExperienceCard.astro";
+---
+
+<SectionLayout id="experience" title="Experience">
+  <div slot="content">
+    <ExperienceCard
+      dateInterval="Abr 2023 - Today"
+      companyName="PlugThem"
+      jobPosition="Backend Developer"
+    >
+      <li>I just started this job.</li>
+      <li>I just started this job.</li>
+      <li>I just started this job.</li>
+    </ExperienceCard>
+
+    <ExperienceCard
+      dateInterval="Oct 2021 - Dic 2021"
+      companyName="Produbanco"
+      jobPosition="Mobile Developer"
+      isFirst
+    >
+      <li>
+        Collaborated in the development of the second version of the mobile
+        banking application.
+      </li>
+      <li>
+        Assisted in the identification of problems in the user interfaces and
+        contributed to their solution.
+      </li>
+      <li>
+        Implemented persistence functionalities on both Android and iOS devices.
+      </li>
+      <li>
+        Participated in the audit of the welcome screens through the use of
+        third-party libraries.
+      </li>
+    </ExperienceCard>
+  </div>
+</SectionLayout>
